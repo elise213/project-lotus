@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import './App.css'
 import Landing from "./components/Landing"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Portfolio from "./components/Portfolio"
 import Services from "./components/Services"
 import Navbar from './components/Navbar'
+
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='home-container'>
+      <Navbar/>
       <Landing />
       <Services />
       <Portfolio />
