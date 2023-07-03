@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from "../styles/portfolio.css";
 
 const Portfolio = () => {
     const [aux, setAux] = useState(0);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [currentProject, setCurrentProject] = useState(null);
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
+
+    // const handleScroll = () => {
+    //     if (window.scrollY > 500) {
+    //         scroll.scrollToTop();
+    //     }
+    // };
 
     const projects = [
         {
@@ -20,21 +33,29 @@ const Portfolio = () => {
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
         },
         {
-            images: ["./sample4.png", "./sample1.png"],
+            images: ["./sample4.png", "./sample5.png"],
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
+        },
+        {
+            images: ["./sample5.png", "./sample1.png"],
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
         },
     ];
 
+    console.log("PROJECTS", projects.length)
+
+    let aux2 = projects.length - 1;
+
     const shiftLeft = () => {
         if (aux === 0) {
-            setAux(3);
+            setAux(aux2);
         } else {
             setAux(aux - 1);
         }
     }
 
     const shiftRight = () => {
-        if (aux === 3) {
+        if (aux === aux2) {
             setAux(0);
         } else {
             setAux(aux + 1);
@@ -79,7 +100,7 @@ const Portfolio = () => {
                             <p className="description">{currentProject.description}</p>
                         </div>
                     </div>
-                    <div className="port">
+                    <div className="center-animated-div">
                         <img className='port-img' src={currentProject.images[1]} alt="" />
                         <img className='port-img' src={currentProject.images[0]} alt="" />
                     </div>
