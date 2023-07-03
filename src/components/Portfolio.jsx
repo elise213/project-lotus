@@ -8,20 +8,20 @@ const Portfolio = () => {
 
     const projects = [
         {
-            images: ["./sample1.png", "./sample1_2.png"],
-            description: "Description for Project 1",
+            images: ["./sample1.png", "./sample2.png"],
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
         },
         {
-            images: ["./sample2.png", "./sample2_2.png"],
-            description: "Description for Project 2",
+            images: ["./sample2.png", "./sample3.png"],
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
         },
         {
-            images: ["./sample3.png", "./sample3_2.png"],
-            description: "Description for Project 3",
+            images: ["./sample3.png", "./sample4.png"],
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
         },
         {
-            images: ["./sample4.png", "./sample4_2.png"],
-            description: "Description for Project 4",
+            images: ["./sample4.png", "./sample1.png"],
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate magnam, at autem, repellendus laudantium omnis itaque ratione voluptatum nulla quos eaque hic voluptatem! Cum facilis iure excepturi esse impedit?"
         },
     ];
 
@@ -70,10 +70,25 @@ const Portfolio = () => {
 
             {modalIsOpen && (
                 <div className='modal'>
-                    <span className='close' onClick={closeModal}>X</span>
-                    <img className='port-img' src={currentProject.images[0]} alt="" />
-                    <p>{currentProject.description}</p>
-                    <img className='port-img' src={currentProject.images[1]} alt="" />
+                    <div className='modal-header'>
+                        <span className='close' onClick={closeModal}>X</span>
+                    </div>
+                    <div className="port">
+                        <img className='port-img' src={currentProject.images[0]} alt="" />
+                        <div className="description-div">
+                            <p className="description">{currentProject.description}</p>
+                        </div>
+                    </div>
+                    <div className="port">
+                        <img className='port-img' src={currentProject.images[1]} alt="" />
+                        <img className='port-img' src={currentProject.images[0]} alt="" />
+                    </div>
+                    <div className="port">
+                        <div className="description-div">
+                            <p className="description">{currentProject.description}</p>
+                        </div>
+                        <img className='port-img' src={currentProject.images[1]} alt="" />
+                    </div>
                 </div>
             )}
         </div>
