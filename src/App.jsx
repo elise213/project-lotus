@@ -5,13 +5,14 @@ import Contact from "./components/Contact"
 import Portfolio from "./components/Portfolio"
 import Services from "./components/Services"
 import Navbar from './components/Navbar'
+import gsap from "gsap";
 
 
 function App() {
 
   return (
     <div className='home-container'>
-      <Navbar/>
+      <Navbar />
       <Landing />
       <Services />
       <Portfolio />

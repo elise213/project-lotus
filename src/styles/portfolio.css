@@ -1,22 +1,34 @@
 .portfolio-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100% !important;
-    height: 100dvh;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: black;
+    z-index: 4;
 }
 
-.image1 {
-    width: 600px;
+.portfolio-image-div1 {
+    width: 400px !important;
+    height: 400px;
     margin: 30px;
 }
 
-.image2 {
-    width: 300px;
+.portfolio-image-div2 {
+    width: 280px !important;
+    height: 280px !important;
+    object-fit: contain;
 }
 
-.modal {
+.portfolio-image1 {
+    width: 400px
+}
+
+.portfolio-image2 {
+    width: 280px
+}
+
+.portfolio-modal {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
@@ -31,14 +43,14 @@
     border: 2px solid peru;
 }
 
-.port {
+.portfolio-item {
     display: flex;
     width: 100%;
     height: 1000px;
     align-items: center;
 }
 
-.center-animated-div {
+.portfolio-center-animated-div {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -46,7 +58,7 @@
     width: 80%;
 }
 
-.port-img {
+.portfolio-item-image {
     width: 400px;
     height: 400px;
     border-radius: 2px;
@@ -60,7 +72,7 @@
     border-radius: 3px;
 }
 
-.close {
+.portfolio-close {
     position: absolute;
     top: 45px;
     right: 90px;
@@ -85,12 +97,47 @@
     margin: 60px;
 }
 
-.description-div {
+.portfolio-description-div {
     padding: 30px;
     line-height: 2;
     font-size: large;
 }
 
-.modal-header {
+.portfolio-modal-header {
     width: 100%;
+}
+
+.square {
+    width: 500px;
+    height: 20vh;
+    background-color: fuchsia;
+    z-index: 4;
+}
+
+.square2 {
+    width: 500px;
+    height: 20vh;
+    background-color: orange;
+    z-index: 4;
+}
+
+.left-arrow {
+    width: 30px;
+    transform: scaleX(-1);
+}
+
+.right-arrow {
+    width: 30px;
+    /* transform: scaleX(-1); */
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.gsap-marker-start,
+.gsap-marker-end {
+    z-index: 9999 !important;
+    color: red;
 }
