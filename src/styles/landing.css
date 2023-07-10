@@ -1,5 +1,3 @@
-
-
 .landing-section {
     width: 100%;
     height: 80vh;
@@ -8,7 +6,6 @@
     align-items: center;
     justify-content: center;
 
-    background-color: var(--background);
 }
 
 /* .text-cont {

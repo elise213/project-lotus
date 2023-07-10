@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg mb-3" id="navbar">
+        <nav className="nav" id="navbar">
             {/* boop */}
             
         </nav >
