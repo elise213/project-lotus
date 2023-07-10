@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import styles from '../styles/contact.css'
+import Form from "./Form";
 
 
 const Contact = () => {
@@ -8,6 +9,7 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
+            <Form/>
             <div className="message-background">
                 <div className="contact-form contact-form-2">
                     <form id="contact_form" name="contact_form" method="post">
