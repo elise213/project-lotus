@@ -9,6 +9,8 @@ const Portfolio = () => {
     const comp = useRef();
     const circle = useRef();
     const portPage = useRef();
+    const dImage2 = useRef();
+    const dImage3 = useRef();
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -18,20 +20,37 @@ const Portfolio = () => {
         setTimeout(() => {
             window.gsap.to(circle.current, {
                 rotation: 360,
-                duration: 5,
+                // duration: 8,
                 scrollTrigger: {
                     trigger: circle.current, // Triggering animation when circle comes into viewport
-                    start: "top 25%",
-                    end: "top 10%",
-                    scrub: 1,
+                    start: "top 20%",
+                    end: "top 4%",
+                    scrub: 3,
                     // markers: true,
                     // pin: portPage.current, // Pin the 'portfolio-container'
-                    pinSpacing: false
+                    // pinSpacing: true,
+                    toggleActions: "restart none none none"
                 }
             });
         }, 1000); // Delay in ms
     }, []);
 
+    useEffect(() => {
+        setTimeout(() => {
+            window.gsap.to(dImage2.current, {
+                rotation: 360,
+                // duration: 8,
+                scrollTrigger: {
+                    trigger: dImage2.current, // Triggering animation when circle comes into viewport
+                    start: "top 30%",
+                    end: "top 4%",
+                    scrub: 3,
+                    markers: true,
+                    toggleActions: "restart none none none"
+                }
+            });
+        }, 1000); // Delay in ms
+    }, [modalIsOpen]);
 
 
     const projects = [
@@ -125,8 +144,8 @@ const Portfolio = () => {
                         </div>
                     </div>
                     <div className="portfolio-center-animated-div">
-                        <img className='portfolio-item-image port-img-2' src={currentProject.images[1]} alt="" />
-                        <img className='portfolio-item-image port-img-3' src={currentProject.images[0]} alt="" />
+                        <img className='portfolio-item-image port-img-2' ref={dImage2} src={currentProject.images[1]} alt="" />
+                        <img className='portfolio-item-image port-img-3' ref={dImage3} src={currentProject.images[0]} alt="" />
                     </div>
                     <div className="portfolio-item">
                         <div className="portfolio-description-div">
