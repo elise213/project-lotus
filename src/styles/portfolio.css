@@ -1,11 +1,14 @@
 .portfolio-container {
+    box-sizing: border-box;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw !important;
-    height: 100vh !important;
+    /* height: 100vh !important; */
     background-color: black;
     z-index: 4;
+    overflow: hidden;
 }
 
 .portfolio-image-div1 {
@@ -29,13 +32,15 @@
 }
 
 .portfolio-modal {
+    box-sizing: border-box;
+    height: 1800px;
     padding-top: 80px;
     display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 1;
     width: 90%;
-    height: 1800px !important;
+    /* height: 1800px !important; */
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -107,20 +112,6 @@
     width: 100%;
 }
 
-.square {
-    width: 500px;
-    height: 20vh;
-    background-color: fuchsia;
-    z-index: 4;
-}
-
-.square2 {
-    width: 500px;
-    height: 20vh;
-    background-color: orange;
-    z-index: 4;
-}
-
 .left-arrow {
     width: 30px;
     transform: scaleX(-1);
@@ -128,7 +119,6 @@
 
 .right-arrow {
     width: 30px;
-    /* transform: scaleX(-1); */
 }
 
 .arrow-button {

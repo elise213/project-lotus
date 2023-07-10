@@ -8,6 +8,7 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
+            <div className="contact-spacer" style={{ height: '200vh' }}></div> {/* Add spacer here */}
             <div className="message-background">
                 <div className="contact-form contact-form-2">
                     <form id="contact_form" name="contact_form" method="post">
