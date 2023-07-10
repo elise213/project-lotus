@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import styles from '../styles/contact.css'
+import Form from "./Form";
 
 
 const Contact = () => {
@@ -8,7 +9,11 @@ const Contact = () => {
 
     return (
         <div className="contact-page">
+<<<<<<< HEAD
             <div className="contact-spacer" style={{ height: '200vh' }}></div> {/* Add spacer here */}
+=======
+            <Form/>
+>>>>>>> 7a7941db860db2c14f5cbde613d50281ae2e08cc
             <div className="message-background">
                 <div className="contact-form contact-form-2">
                     <form id="contact_form" name="contact_form" method="post">

@@ -3,6 +3,10 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 7a7941db860db2c14f5cbde613d50281ae2e08cc
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,5 +25,9 @@ body {
   width: 100vw;
   overflow-x: hidden;
   color: rgba(255, 255, 255, 0.87);
+<<<<<<< HEAD
   background-color: var(--background);
+=======
+  background-color: var(--background) !important;
+>>>>>>> 7a7941db860db2c14f5cbde613d50281ae2e08cc
 }
