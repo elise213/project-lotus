@@ -11,7 +11,6 @@ const Portfolio = () => {
     const circle = useRef();
     const portPage = useRef();
     const square = useRef();
-    const modalDiv = useRef();
 
     console.log("open modal", modalIsOpen);
     console.log("current project", currentProject);
@@ -131,8 +130,11 @@ const Portfolio = () => {
         <div className="container">
             <div className='spacer' style={{ display: 'none' }}></div>
             {modalIsOpen && (
-                <div className="modal-div" ref={modalDiv}>
-                    <PortfolioModal isOpen={modalIsOpen} closeModal={closeModal} currentProject={currentProject} />
+                <div>
+                    <div className="modal-overlay"></div>
+                    <div className="modal-div" >
+                        <PortfolioModal isOpen={modalIsOpen} closeModal={closeModal} currentProject={currentProject} />
+                    </div>
                 </div>
             )}
 
