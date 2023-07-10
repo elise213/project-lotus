@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/portfolio.css";
+import PortfolioModal from "./PortfolioModal";
 
 const Portfolio = () => {
     const [aux, setAux] = useState(0);
@@ -9,9 +10,11 @@ const Portfolio = () => {
     const comp = useRef();
     const circle = useRef();
     const portPage = useRef();
-    const dImage2 = useRef();
-    const dImage3 = useRef();
     const square = useRef();
+    const modalDiv = useRef();
+
+    console.log("open modal", modalIsOpen);
+    console.log("current project", currentProject);
 
     useEffect(() => {
         gsap.set(portPage.current, { autoAlpha: 1 });
@@ -35,7 +38,7 @@ const Portfolio = () => {
                 },
                 onEnterBack: () => {
                     gsap.set(portPage.current, { position: 'fixed', top: 0 })
-                    gsap.set('.spacer', { display: 'block', height: `${portPage.current.offsetHeight}px` }) // Add spacer
+                    // gsap.set('.spacer', { display: 'block', height: `${portPage.current.offsetHeight}px` }) // Add spacer
                 },
                 onLeaveBack: () => {
                     gsap.set(portPage.current, { position: 'static' })
@@ -45,24 +48,21 @@ const Portfolio = () => {
         });
     }, []);
 
-
-
     useEffect(() => {
-        setTimeout(() => {
-            window.gsap.to(dImage2.current, {
-                rotation: 360,
-                // duration: 8,
-                scrollTrigger: {
-                    trigger: dImage2.current, // Triggering animation when circle comes into viewport
-                    start: "top 30%",
-                    end: "top 4%",
-                    scrub: 3,
-                    // markers: true,
-                    toggleActions: "restart none none none"
-                }
-            });
-        }, 1000); // Delay in ms
-    }, [modalIsOpen]);
+        gsap.set(portPage.current, { autoAlpha: 1 });
+        gsap.to(circle.current, {
+            rotation: 360,
+            scrollTrigger: {
+                trigger: portPage.current,
+                start: "top top",
+                end: () => `+=${portPage.current.offsetHeight}px`,
+                scrub: 3,
+                pinSpacing: true,
+                // markers: true,
+                // toggleActions: "restart none none none",
+            }
+        });
+    }, []);
 
 
     const projects = [
@@ -115,16 +115,26 @@ const Portfolio = () => {
     const openModal = (project) => {
         setCurrentProject(project);
         setModalIsOpen(true);
+        document.body.classList.add('bodyNoScroll'); // Add this line
+        console.log("Open Modal called");
     };
 
     const closeModal = () => {
+        console.log("Close Modal called");
         setModalIsOpen(false);
+        document.body.classList.remove('bodyNoScroll'); // Add this line
     };
 
 
+
     return (
-        <div>
-            <div className='spacer' style={{ display: 'none' }}></div> {/* Spacer element */}
+        <div className="container">
+            <div className='spacer' style={{ display: 'none' }}></div>
+            {modalIsOpen && (
+                <div className="modal-div" ref={modalDiv}>
+                    <PortfolioModal isOpen={modalIsOpen} closeModal={closeModal} currentProject={currentProject} />
+                </div>
+            )}
 
             <div className='portfolio-container' ref={portPage}>
                 <button className="arrow-button" onClick={shiftLeft}><img className="left-arrow" src="./coralarrow.png"></img></button>
@@ -139,31 +149,6 @@ const Portfolio = () => {
                     <img className="portfolio-image2" src={projects[(aux + 2) % projects.length].images[0]} alt="" onClick={() => openModal(projects[(aux + 2) % projects.length])} />
                 </div>
                 <button className="arrow-button" onClick={shiftRight}><img className="right-arrow" src="./coralarrow.png"></img></button>
-
-
-                {modalIsOpen && (
-                    <div className='portfolio-modal'>
-                        <div className='portfolio-modal-header'>
-                            <span className='portfolio-close' onClick={closeModal}>X</span>
-                        </div>
-                        <div className="portfolio-item">
-                            <img className='portfolio-item-image port-img-1' src={currentProject.images[0]} alt="" />
-                            <div className="portfolio-description-div">
-                                <p className="portfolio-description">{currentProject.description}</p>
-                            </div>
-                        </div>
-                        <div className="portfolio-center-animated-div">
-                            <img className='portfolio-item-image port-img-2' ref={dImage2} src={currentProject.images[1]} alt="" />
-                            <img className='portfolio-item-image port-img-3' ref={dImage3} src={currentProject.images[0]} alt="" />
-                        </div>
-                        <div className="portfolio-item">
-                            <div className="portfolio-description-div">
-                                <p className="portfolio-description">{currentProject.description2}</p>
-                            </div>
-                            <img className='portfolio-item-image port-img-4' src={currentProject.images[1]} alt="" />
-                        </div>
-                    </div>
-                )}
             </div>
         </div>
     );

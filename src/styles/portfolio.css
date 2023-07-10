@@ -1,3 +1,50 @@
+.container {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* position: absolute;
+    left: 0;
+    bottom: 0; */
+    height: 100%;
+    left: 100%;
+}
+
+.portfolio-modal {
+    margin-top: 0px;
+    /* box-sizing: border-box; */
+    height: 95vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    /* instead of absolute */
+    top: 50%;
+    /* center the modal vertically */
+    left: 50%;
+    /* center the modal horizontally */
+    transform: translate(-50%, -50%);
+    /* shift the modal back by half of its width and height to ensure it's centered */
+    z-index: 999 !important;
+    width: 90%;
+    background-color: ivory;
+    border-radius: 2px;
+    border: 8px double peru;
+    border-radius: 6px;
+    color: peru;
+    font-size: 5rem;
+    overflow-y: scroll;
+}
+
+.bodyNoScroll {
+    overflow: hidden;
+}
+
 .portfolio-container {
     box-sizing: border-box;
     height: 100vh;
@@ -5,7 +52,6 @@
     justify-content: center;
     align-items: center;
     width: 100vw !important;
-    /* height: 100vh !important; */
     background-color: black;
     z-index: 4;
     overflow: hidden;
@@ -29,23 +75,6 @@
 
 .portfolio-image2 {
     width: 280px
-}
-
-.portfolio-modal {
-    box-sizing: border-box;
-    height: 1800px;
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    width: 90%;
-    /* height: 1800px !important; */
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 2px;
-    border: 2px solid peru;
 }
 
 .portfolio-item {
@@ -79,8 +108,8 @@
 
 .portfolio-close {
     position: absolute;
-    top: 45px;
-    right: 90px;
+    top: 20px;
+    right: 40px;
     color: salmon;
     font-size: 40px;
     font-weight: bold;
