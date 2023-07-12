@@ -10,16 +10,14 @@ import gsap from "gsap";
 
 function App() {
   return (
-    <Router>
       <div className='home-container'>
         {/* <Navbar /> */}
         <Landing />
         <Services />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <About />
         <Contact />
       </div>
-    </Router>
   );
 }
 

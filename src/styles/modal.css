@@ -1,0 +1,84 @@
+/* ______________________________________________________card */
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.openModalDiv {
+  text-align: center;
+  width: 100%;
+}
+.openModalDiv:is(:hover, :focus){
+  cursor: pointer;
+}
+.openModalDiv img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* ______________________________________________________ modal */
+.modal-root {
+    z-index: 1000;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  width: 600px;
+  background-color: #fff;
+  color: #242424;
+  padding: 0.5rem;
+  border-radius: 0.356rem;
+  height: 80%;
+  overflow-y: scroll;
+}
+.modal-header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #584e4e;
+}
+.modal-header button {
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  transform: scaleX(1.2);
+  border: none;
+  color: #6d6b6b;
+}
+.modal-header button:is(:hover, :active) {
+  color:#242424;
+  cursor: pointer;
+}
+.modal-footer {
+  border-top: 1px solid #584e4e;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+}
+/* __________________________________________styles for the submit button  */
+.modal-submit-btn{
+  padding: 0.5rem;
+  letter-spacing: 3px;
+  border-radius: 0.256rem;
+  background-color: orangered;
+  border: none;
+}
+.modal-submit-btn:is(:hover, :active){
+  background-color: rgb(163, 46, 3);
+  cursor: pointer;
+}
+.d-none {
+  display: none !important;
+}
+.no-scroll{
+    overflow: hidden !important;
+}

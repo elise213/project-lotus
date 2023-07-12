@@ -10,6 +10,7 @@
 }
 .form-div{
     width: 100%;
+    padding: 0;
 }
 .contact-form-top .form-div label {
     display: block;
@@ -21,6 +22,8 @@
     border-radius: 0.356rem;
     height: 40px;
     width: 100%;
+    font-size: 1.2rem;
+    padding: 0;
 }
 
 .contact-form-mid {
@@ -37,6 +40,8 @@
     background-color: white;
     border: 1px solid black;
     border-radius: 0.356rem;
+    font-size: 1.1rem;
+    padding: 0;
 }
 
 .contact-send-btn{
