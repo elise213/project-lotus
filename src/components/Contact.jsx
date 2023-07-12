@@ -6,11 +6,11 @@ import Form from "./Form"
 const Contact = () => {
     const form = useRef();
     const SERVICE_ID = "service_betnze8";
-    "service_0hip2bt";
+    // "service_0hip2bt";
     const TEMPLATE_ID = "template_99iigjc";
     // "template_u7nitmj";
     const PUBLIC_KEY = "bSrh0TD_khQU1Jash";
-    "frmUHhhWUG9vtMRit";
+    // "frmUHhhWUG9vtMRit";
 
     const sendEmail = (e) => {
         e.preventDefault();
