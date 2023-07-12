@@ -4,18 +4,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
-    /* position: absolute;
-    left: 0;
-    bottom: 0; */
     height: 100%;
     left: 100%;
 }
 
+.container-2 {
+    overflow-y: scroll;
+    height: 100%;
+}
+
 .portfolio-modal {
     margin-top: 0px;
-    /* box-sizing: border-box; */
     height: 95vh;
     padding-top: 80px;
     display: flex;
@@ -23,7 +23,6 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    /* instead of absolute */
     top: 50%;
     /* center the modal vertically */
     left: 50%;
@@ -33,9 +32,8 @@
     z-index: 999 !important;
     width: 90%;
     background-color: ivory;
-    border-radius: 2px;
-    border: 8px double peru;
-    border-radius: 6px;
+    border: 10px double peru;
+    border-radius: 3px;
     color: peru;
     font-size: 5rem;
     overflow-y: scroll;
@@ -51,7 +49,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw !important;
     background-color: black;
     z-index: 4;
     overflow: hidden;
@@ -139,6 +136,7 @@
 
 .portfolio-modal-header {
     width: 100%;
+    margin-top: 100%;
 }
 
 .left-arrow {
@@ -168,7 +166,6 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .7);
-    /* semi-transparent black */
     z-index: 998;
     /* Below the modal but above everything else */
 }

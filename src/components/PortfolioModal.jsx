@@ -28,7 +28,7 @@ const PortfolioModal = ({ isOpen, closeModal, currentProject }) => {
 
     return (
         // isOpen && (
-        <div className="container">
+        <div className="container-2">
             <div className='portfolio-modal'>
                 <div className='portfolio-modal-header'>
                     <span className='portfolio-close' onClick={closeModal}>X</span>

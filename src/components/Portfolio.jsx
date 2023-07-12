@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "../styles/portfolio.css";
+// import styles from "../styles/portfolio.css";
 import PortfolioModal from "./PortfolioModal";
+import styles from "../styles/portfolio.css?inline";
+
 
 const Portfolio = () => {
     const [aux, setAux] = useState(0);
@@ -33,7 +35,7 @@ const Portfolio = () => {
                 },
                 onLeave: () => {
                     gsap.set(portPage.current, { position: 'static' })
-                    //     gsap.set('.spacer', { display: 'none' }) // Remove spacer
+                    // gsap.set('.spacer', { display: 'none' }) // Remove spacer
                 },
                 onEnterBack: () => {
                     gsap.set(portPage.current, { position: 'fixed', top: 0 })
@@ -62,7 +64,6 @@ const Portfolio = () => {
             }
         });
     }, []);
-
 
     const projects = [
         {
@@ -114,21 +115,21 @@ const Portfolio = () => {
     const openModal = (project) => {
         setCurrentProject(project);
         setModalIsOpen(true);
-        document.body.classList.add('bodyNoScroll'); // Add this line
+        document.body.classList.add('bodyNoScroll');
         console.log("Open Modal called");
     };
 
     const closeModal = () => {
         console.log("Close Modal called");
         setModalIsOpen(false);
-        document.body.classList.remove('bodyNoScroll'); // Add this line
+        document.body.classList.remove('bodyNoScroll');
     };
-
 
 
     return (
         <div className="container">
             <div className='spacer' style={{ display: 'none' }}></div>
+            {/* <div className='spacer' style={{ display: 'none' }}></div> */}
             {modalIsOpen && (
                 <div>
                     <div className="modal-overlay"></div>
