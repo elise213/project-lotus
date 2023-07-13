@@ -9,3 +9,82 @@
     /* background-color: ivory; */
 }
 
+<<<<<<< HEAD
+=======
+.message-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    border-radius: 1.1%;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+}
+
+.consultation {
+    color: black;
+    font-family: "Urbanist", sans-serif;
+    font-size: large;
+}
+
+.consultation-link {
+    color: brown;
+    text-decoration: none;
+}
+
+.consultation-link:hover {
+    cursor: pointer;
+}
+
+.contact-form-2 {
+    width: 90%;
+}
+
+.label {
+    font-family: "Urbanist", sans-serif;
+    color: brown;
+    width: 50%;
+}
+
+.looking-forward {
+    font-size: 20px;
+    color: white;
+    font-family: "Urbanist", sans-serif;
+}
+
+.form-control {
+    border: 1px solid black;
+}
+
+.send-button {
+    background-color: pink;
+    border: 4px solid salmon;
+    color: salmon;
+    font-family: "Urbanist", sans-serif;
+    font-size: x-large;
+    border-radius: 2px;
+}
+
+.send-button:hover {
+    background-color: salmon !important;
+    border: 4px solid pink !important;
+    color: pink;
+}
+
+@media screen and (max-width: 800px) {
+    .message-background {
+        width: 90% !important;
+    }
+}
+
+.contact-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-div2 {
+    display: flex;
+}
+>>>>>>> f6c2c3b7515708f3bf22d2c9ddf7ffa9b659b912
