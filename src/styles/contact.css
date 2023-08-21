@@ -2,15 +2,12 @@
     display: flex;
     flex-direction: row;
     height: 90vh;
-    /* margin: 0 !important; */
-    /* margin-top: 1000px; */
     justify-content: center;
     align-items: center;
-    /* background-color: ivory; */
+    margin-top: 200px;
 }
 
-<<<<<<< HEAD
-=======
+/* <<<<<<< HEAD======= */
 .message-background {
     display: flex;
     flex-direction: column;
@@ -23,13 +20,13 @@
 }
 
 .consultation {
-    color: black;
+    color: rgb(60, 23, 23);
     font-family: "Urbanist", sans-serif;
     font-size: large;
 }
 
 .consultation-link {
-    color: brown;
+    color: rgb(252, 133, 100);
     text-decoration: none;
 }
 
@@ -43,7 +40,7 @@
 
 .label {
     font-family: "Urbanist", sans-serif;
-    color: brown;
+    color: rgb(252, 133, 100);
     width: 50%;
 }
 
@@ -54,20 +51,20 @@
 }
 
 .form-control {
-    border: 1px solid black;
+    border: 1px solid rgb(60, 23, 23);
 }
 
 .send-button {
     background-color: pink;
-    border: 4px solid salmon;
-    color: salmon;
+    border: 4px solid rgb(252, 133, 100);
+    color: rgb(252, 133, 100);
     font-family: "Urbanist", sans-serif;
     font-size: x-large;
     border-radius: 2px;
 }
 
 .send-button:hover {
-    background-color: salmon !important;
+    background-color: rgb(252, 133, 100);
     border: 4px solid pink !important;
     color: pink;
 }
@@ -87,4 +84,5 @@
 .contact-div2 {
     display: flex;
 }
->>>>>>> f6c2c3b7515708f3bf22d2c9ddf7ffa9b659b912
+
+/* >>>>>>>f6c2c3b7515708f3bf22d2c9ddf7ffa9b659b912 */
