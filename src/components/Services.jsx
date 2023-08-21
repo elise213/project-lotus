@@ -23,10 +23,7 @@ const Services = () => {
                     </p>
                 </div>
             </div>
-            <Modal 
-                idx={'123'}
-                image={'https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}
-            />
+            
             <div className='SEO-backed'>
                 <div className="service-text-cont">
                     <p className='service-title'>SEO Backed Web Design</p>
