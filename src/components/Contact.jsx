@@ -8,6 +8,7 @@ const Contact = () => {
 
     return (
         <div className="contact-page" ref={contactPage}>
+            <p className="getInTouch">Get in touch with CODELOTUS</p>
             <Form />
         </div>
 

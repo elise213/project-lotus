@@ -52,3 +52,36 @@
     font-size: 10rem;
     color: var(--highlight);
 }
+@media only screen and (max-width: 600px){
+    .responsive-web-design{
+        flex-direction: column;
+    }
+    .responsive-img{
+        width: 100%;
+    }
+    .service-text-cont {
+        width: 100%;
+        padding: 1em;
+    }
+    .service-title{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .service-text{
+        padding: 0 2rem;
+    }
+    .SEO-backed .card-cont {
+        overflow-x: scroll;
+        display: block;
+        white-space: nowrap;  
+        flex-direction: row;
+        width: 100%;
+        height: 370px;
+    }
+    .SEO-backed .card-cont .card {
+        box-sizing: border-box; 
+        display:inline-block;  
+        text-wrap: initial;
+        margin-inline: 0.5rem;
+    }
+}

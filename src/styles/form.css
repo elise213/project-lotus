@@ -1,6 +1,7 @@
 .contact-form {
-    width: 800px;
+    width: 60%;
     color: black;
+    padding: 1em;
 }
 
 .contact-form-top {
@@ -53,4 +54,14 @@
 .text-color {
     /* whatever color you want for the text */
     color: coral;
+}
+
+@media only screen and (max-width: 600px){
+    .contact-form {
+        width: 95%;
+        /* margin: 1rem; */
+    }
+    .contact-form-top {
+        flex-direction: column;
+    }
 }

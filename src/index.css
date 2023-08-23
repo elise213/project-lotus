@@ -10,10 +10,14 @@
   -webkit-text-size-adjust: 100%;
 
   /* custom vars */
-  --highlight: rgb(122, 250, 210);
+  --highlight: #FC8564;
   --background: rgb(72, 68, 60);
 }
-
+/* this it the import link for the font "Urbanist" */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+*{
+  font-family: "Urbanist", sans-serif;
+}
 body {
   margin: 0;
   padding: 0;
@@ -22,3 +26,8 @@ body {
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--background);
 }
+
+
+/* @media only screen and (max-width: 600px){
+  
+} */

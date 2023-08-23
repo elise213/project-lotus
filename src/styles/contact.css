@@ -1,15 +1,26 @@
 .contact-page {
     display: flex;
-    flex-direction: row;
-    height: 90vh;
+    flex-direction: column;
+    /* height: vh; */
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    /* padding-block: 30em; */
+    /* margin-top: 200px; */
 }
-
-<<<<<<< HEAD
-=======
-/* <<<<<<< HEAD======= */
+.getInTouch {
+    font-size: 2em;
+    margin: 2em;
+    font-weight: 500;
+    
+}
+@media only screen and (max-width: 600px){
+    .getInTouch {
+        text-align: center;
+        /* margin: 1rem; */
+    }
+ 
+}
+/* <<<<<<< HEAD=======
 .message-background {
     display: flex;
     flex-direction: column;
@@ -85,7 +96,6 @@
 
 .contact-div2 {
     display: flex;
-}
+} */
 
 /* >>>>>>>f6c2c3b7515708f3bf22d2c9ddf7ffa9b659b912 */
->>>>>>> bec829471eb78b836c03d72b2ffa167fd70fd9b1
