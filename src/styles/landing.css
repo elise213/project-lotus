@@ -12,19 +12,26 @@
     display: flex;
 } */
 .text {
-    font-size: 10rem;
+    /* font-size: 10rem; */
+    /* MARA'S EXPERIMENT */
+    font-size: 8rem;
     font-weight: 600;
 }
 
 .text-cont {
     position: relative;
+    /* MARA */
+    margin-top: 100px;
 }
-.text-cont p:nth-child(1){
+
+.text-cont p:nth-child(1) {
     color: var(--highlight)
 }
-.text-cont p:nth-child(5){
+
+.text-cont p:nth-child(5) {
     color: var(--highlight)
 }
+
 .text-cont p {
     position: relative;
     display: inline-block;
@@ -32,9 +39,10 @@
     /* opacity: 0; */
     text-transform: uppercase;
     animation-timing-function: linear;
-    animation: something 3s ;
+    animation: something 3s;
     animation-delay: calc(.1s * var(--i));
 }
+
 /* @keyframes flip {
     0%,80% {
         transform: rotateX(360deg)
@@ -42,20 +50,22 @@
 } */
 
 @keyframes something {
-0% {
-    /* opacity: 0.5; */
-    transform: rotateX(360deg)
-  }
-  80% {
-    /* opacity: 1; */
-    transform: rotateX(360deg)
-  }
+    0% {
+        /* opacity: 0.5; */
+        transform: rotateX(360deg)
+    }
+
+    80% {
+        /* opacity: 1; */
+        transform: rotateX(360deg)
+    }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     .landing-section {
         height: 50vh;
     }
+
     .text {
         font-size: 3rem;
     }

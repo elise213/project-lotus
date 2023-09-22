@@ -13,11 +13,14 @@
   --highlight: #FC8564;
   --background: rgb(72, 68, 60);
 }
+
 /* this it the import link for the font "Urbanist" */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
-*{
+
+* {
   font-family: "Urbanist", sans-serif;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -27,7 +30,16 @@ body {
   background-color: var(--background);
 }
 
+.home-container {
+  margin: 0px 50px;
+  min-height: 500px;
+}
+
 
 /* @media only screen and (max-width: 600px){
   
 } */
+
+.lotus-img {
+  z-index: 999;
+}

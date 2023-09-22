@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Contact } from "./pages/Contact";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
+import { Footer } from "./component/Footer";
 
 
 const Layout = () => {
@@ -12,18 +13,18 @@ const Layout = () => {
     const basename = import.meta.env.BASENAME || "";
 
     return (
-        <div>
-            <BrowserRouter basename={basename}>
-                <ScrollToTop>
-                    <Navbar />
-                    <Routes>
-                        <Route element={<Home />} path="/" />
-                        <Route element={<Contact />} path="/contact" />
-                    </Routes>
-                    {/* <Footer /> */}
-                </ScrollToTop>
-            </BrowserRouter>
-        </div>
+        <BrowserRouter basename={basename}>
+            <Navbar />
+            <ScrollToTop>
+                <Routes>
+                    <Route element={<Home />} path="/" />
+                    <Route element={<Portfolio />} path="/portfolio" />
+                    <Route element={<Contact />} path="/contact" />
+                </Routes>
+            </ScrollToTop>
+            <Footer />
+        </BrowserRouter>
+
     );
 };
 

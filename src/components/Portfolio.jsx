@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import PortfolioModal from "./PortfolioModal";
+// import styles from "../styles/portfolio.css";
 import styles from "../styles/portfolio.css?inline";
 gsap.registerPlugin(ScrollTrigger);
-import { gsap } from "gsap";
 import CircleType from "circletype";
 
 const Portfolio = () => {
@@ -26,24 +26,26 @@ const Portfolio = () => {
     }, []);
 
     useEffect(() => {
-        gsap.set(portPage.current, { autoAlpha: 1 });
-        gsap.to(circle.current, {
+        const circleTimeline = gsap.to(circle.current, {
             rotation: 360,
             scrollTrigger: {
                 trigger: portPage.current,
-                start: "center center",
+                start: 'center center',
                 end: () => `+=${window.innerHeight / 2}`,
                 scrub: 4,
                 pin: true,
-                // markers: true,
-                toggleActions: "restart none none none"
+                toggleActions: 'restart none none none',
             }
         });
+
         return () => {
-            ScrollTrigger.getAll().forEach((st) => st.kill());
-            gsap.globalTimeline.clear();
+            if (circleTimeline) {
+                circleTimeline.scrollTrigger.kill();
+                circleTimeline.kill();
+            }
         };
     }, []);
+
 
     const projects = [
         {
@@ -76,19 +78,27 @@ const Portfolio = () => {
     let lastIndex = projects.length - 1;
 
     const shiftLeft = () => {
-        if (aux === 0) {
-            setAux(lastIndex);
-        } else {
-            setAux(aux - 1);
-        }
+
+
+        setTimeout(() => {
+            if (aux === 0) {
+                setAux(lastIndex);
+            } else {
+                setAux(aux - 1);
+            }
+
+        }, 0); // the timeout duration matches the transition duration
     };
 
     const shiftRight = () => {
-        if (aux === lastIndex) {
-            setAux(0);
-        } else {
-            setAux(aux + 1);
-        }
+
+        setTimeout(() => {
+            if (aux === lastIndex) {
+                setAux(0);
+            } else {
+                setAux(aux + 1);
+            }
+        }, 0); // the timeout duration matches the transition duration
     };
 
     const openModal = (project) => {
@@ -114,7 +124,6 @@ const Portfolio = () => {
                     </div>
                 </div>
             )}
-            {/* <div className='spacer' style={{ display: 'block' }}></div> */}
             <div className="question">
                 <div className="circle-font" ref={circleInstance}>RECENT PROJECTS</div>
             </div>
@@ -123,13 +132,13 @@ const Portfolio = () => {
                 <div className='portfolio-inner'>
                     <button className="arrow-button" onClick={shiftLeft}><img className="left-arrow" src="./coralarrow.png"></img></button>
                     <div className='portfolio-image-div2'>
-                        <img className="portfolio-image2" src={projects[aux].images[0]} alt="" onClick={() => openModal(projects[aux])} />
+                        <img className="portfolio-image1" src={projects[aux].images[0]} alt="" onClick={() => openModal(projects[aux])} />
                     </div>
                     <div className='portfolio-image-div1 box' ref={circle}>
-                        <img className="portfolio-image1" src={projects[(aux + 1) % projects.length].images[0]} alt="" onClick={() => openModal(projects[(aux + 1) % projects.length])} />
+                        <img className="portfolio-image2" src={projects[(aux + 1) % projects.length].images[0]} alt="" onClick={() => openModal(projects[(aux + 1) % projects.length])} />
                     </div>
                     <div className='portfolio-image-div2'>
-                        <img className="portfolio-image2" src={projects[(aux + 2) % projects.length].images[0]} alt="" onClick={() => openModal(projects[(aux + 2) % projects.length])} />
+                        <img className="portfolio-image3" src={projects[(aux + 2) % projects.length].images[0]} alt="" onClick={() => openModal(projects[(aux + 2) % projects.length])} />
                     </div>
                     <button className="arrow-button" onClick={shiftRight}><img className="right-arrow" src="./coralarrow.png"></img></button>
                 </div>
