@@ -1,7 +1,6 @@
 import React from 'react'
 import { MdPhoneIphone, MdCode, MdSpeed, MdArchitecture } from "react-icons/md";
 import '../styles/services.css'
-import Modal from './Modal';
 
 const Services = () => {
     return (
