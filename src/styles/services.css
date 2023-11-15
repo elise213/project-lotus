@@ -1,76 +1,79 @@
-.services{
-    text-align: center;
+.services {
+  text-align: center;
 }
 .responsive-web-design {
-    width: 100%;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    margin-block: 3rem;
-    text-align: justify;
-    gap: 2rem;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  margin-block: 3rem;
+  text-align: justify;
+  gap: 2rem;
 }
 .responsive-img {
-    width: 400px;
+  width: 400px;
 }
-.service-text-cont{
-    width: 800px;
+.service-text-cont {
+  width: 800px;
 }
-
-
 
 .SEO-backed {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 3rem;
 }
 .SEO-backed .card-cont {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-block: 4rem 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-block: 4rem 3rem;
 }
 .SEO-backed .card-cont .card {
-    text-align: center;
-    width: 300px;
-    /* white-space: nowrap; */
-    border-radius: 3.56rem;
-    border: 1px solid re;
+  text-align: center;
+  width: 300px;
+  /* white-space: nowrap; */
+  border-radius: 3.56rem;
+  border: 1px solid re;
 }
 
 .service-title {
-    font-size: 5rem;
-    color: var(--highlight);
-    line-height: 5.2rem;
-    text-align: center;
+  font-size: 5rem;
+  color: var(--highlight);
+  line-height: 5.2rem;
+  text-align: center;
 }
 
 .icon {
-    font-size: 10rem;
-    color: var(--highlight);
+  font-size: 10rem;
+  color: var(--highlight);
 }
-@media only screen and (max-width: 600px){
-    .responsive-web-design{
-        flex-direction: column;
-    }
-    .responsive-img{
-        width: 100%;
-    }
-    .service-text-cont {
-        width: 100%;
-        padding: 1em;
-    }
-    .service-title{
-        font-size: 3rem;
-        line-height: 3rem;
-    }
-    .service-text{
-        padding: 0 2rem;
-    }
-    .SEO-backed .card-cont {
+
+@media only screen and (max-width: 900px) {
+  .responsive-web-design {
+    flex-direction: column;
+  }
+  .responsive-img {
+    width: 100%;
+  }
+  .service-text-cont {
+    width: 100%;
+    padding: 1em;
+  }
+  .service-title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .service-text {
+    padding: 0 2rem;
+  }
+
+  .icon {
+    font-size: 6rem !important;
+  }
+  /* .SEO-backed .card-cont {
         overflow-x: scroll;
         display: block;
         white-space: nowrap;  
@@ -83,5 +86,9 @@
         display:inline-block;  
         text-wrap: initial;
         margin-inline: 0.5rem;
-    }
+    } */
+
+  .SEO-backed .card-cont .card {
+    width: 100% !important;
+  }
 }

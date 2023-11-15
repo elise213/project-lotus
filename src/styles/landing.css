@@ -1,72 +1,74 @@
 .landing-section {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .text-cont {
-    display: flex;
-} */
 .text {
-    /* font-size: 10rem; */
-    /* MARA'S EXPERIMENT */
-    font-size: 8rem;
-    font-weight: 600;
+  /* font-size: 10rem; */
+  font-size: 10vw; /* Changed from 10rem to 10vw for responsive size */
 }
 
 .text-cont {
-    position: relative;
-    /* MARA */
-    margin-top: 100px;
+  position: relative;
+  /* MARA */
+  margin-top: 100px;
 }
 
 .text-cont p:nth-child(1) {
-    color: var(--highlight)
+  color: var(--highlight);
 }
 
 .text-cont p:nth-child(5) {
-    color: var(--highlight)
+  color: var(--highlight);
 }
 
 .text-cont p {
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    /* opacity: 0; */
-    text-transform: uppercase;
-    animation-timing-function: linear;
-    animation: something 3s;
-    animation-delay: calc(.1s * var(--i));
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  /* opacity: 0; */
+  text-transform: uppercase;
+  animation-timing-function: linear;
+  animation: something 3s;
+  animation-delay: calc(0.1s * var(--i));
 }
 
-/* @keyframes flip {
-    0%,80% {
-        transform: rotateX(360deg)
-    }
-} */
+.lotus-container {
+  min-height: unset !important;
+  width: 100%;
+}
 
 @keyframes something {
-    0% {
-        /* opacity: 0.5; */
-        transform: rotateX(360deg)
-    }
+  0% {
+    /* opacity: 0.5; */
+    transform: rotateX(360deg);
+  }
 
-    80% {
-        /* opacity: 1; */
-        transform: rotateX(360deg)
-    }
+  80% {
+    /* opacity: 1; */
+    transform: rotateX(360deg);
+  }
 }
 
-@media only screen and (max-width: 600px) {
-    .landing-section {
-        height: 50vh;
-    }
+.lotus-img {
+  width: 15vw;
+  z-index: 999;
+}
 
-    .text {
-        font-size: 3rem;
-    }
+@media only screen and (max-width: 900px) {
+  .landing-section {
+    height: 50vh;
+  }
+
+  .text {
+    font-size: 12vw;
+  }
+
+  .lotus-img {
+    width: 20vw;
+  }
 }
